@@ -7,11 +7,11 @@ function test(syncedArray, externalArray) {
 
   syncedArray.forEach((oldId) => {
     externalArray.forEach((newId) => {
-      if (oldId.id == newId.id) {
+      if (oldId.id === newId.id) {
         oldId.check = true;
         newId.check = true;
 
-        if (oldId.price != newId.price) {
+        if (oldId.price !== newId.price) {
           result.update.push(oldId.id);
         }
       }

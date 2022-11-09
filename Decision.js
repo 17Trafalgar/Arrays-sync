@@ -18,12 +18,12 @@ function test(syncedArray, externalArray) {
     });
   });
 
-  for (let oldObj of syncedArray) {
+  for (const oldObj of syncedArray) {
     if (!oldObj.check) {
       result.delete.push(oldObj.id);
     }
   }
-  for (let newObj of externalArray) {
+  for (const newObj of externalArray) {
     if (!newObj.check) {
       result.add.push(newObj.id);
     }
